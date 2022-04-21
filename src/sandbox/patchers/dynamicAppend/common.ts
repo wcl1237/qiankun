@@ -221,7 +221,7 @@ function getOverwrittenAppendChildOrInsertBefore(opts: {
 
           const mountDOM = appWrapperGetter();
           const { fetch } = frameworkConfiguration;
-          const referenceNode = mountDOM.contains(refChild) ? refChild : null;
+          const referenceNode = mountDOM.contains(refChild) ? refChild : mountDOM;
 
           if (src) {
             execScripts(null, [src], proxy, {
